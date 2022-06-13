@@ -76,21 +76,21 @@
         tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
 ```
 
-    In this refactored code, a tickerIndex is used outside of the loop through the data, and it is iterated upon once the current row ticker symbol does not match the next row ticker symbol. This allows us to keep track of the running totals for each stock as we go, rather than looping through the entire dataset for one stock, adding it up, then starting from the beginning of the data for the next stock.
+  In this refactored code, a tickerIndex is used outside of the loop through the data, and it is iterated upon once the current row ticker symbol does not match the next row ticker symbol. This allows us to keep track of the running totals for each stock as we go, rather than looping through the entire dataset for one stock, adding it up, then starting from the beginning of the data for the next stock.
     
     As you would expect, running through the whole dataset one time rather than once per stock or 12 times greatly improves performance as seen in these screenshots of before and after processing times:
     
-    #### Before Refactoring Processing Times
+  #### Before Refactoring Processing Times
     
-    ![Before1](Resources/VBA_Challenge_2017.PNG)
+  ![Before1](Resources/VBA_Challenge_2017.PNG)
     
-    ![Before2](Resources/VBA_Challenge_2018.PNG)
+  ![Before2](Resources/VBA_Challenge_2018.PNG)
     
-    #### After Refactoring Processing Times
+  #### After Refactoring Processing Times
     
-    ![After1](Resources/VBA_Challenge_Refactored_2017.PNG)
+  ![After1](Resources/VBA_Challenge_Refactored_2017.PNG)
     
-    ![After2](Resources/VBA_Challenge_Refactored_2018.PNG)
+  ![After2](Resources/VBA_Challenge_Refactored_2018.PNG)
 
 
 The analysis is well described with screenshots and code (4 pt).
