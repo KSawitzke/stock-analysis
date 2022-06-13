@@ -92,10 +92,12 @@
     
   ![After2](Resources/VBA_Challenge_Refactored_2018.PNG)
 
+While both the before and after are less than a second, it is nearly 10 times faster overall. This doesn't matter as much when the dataset is as small as it is, but when potentially looking at hundreds or thousands of stocks, a 10-fold improvement can save some serious time!
 
 ## Summary
 
-In general, 
+In general, taking a second pass at your code can offer huge advantages as far as long-term functionality and performance. One advantage is making the code more general, and less tied to the specific dataset you created it for initially. That ties directily into creating a more flexible code that can take multiple inputs of similar types of data. Another advantage is creating efficiencies that reduce processing time. 
+While these are great advantages, broadening the code can introduce additional complexity into the picture. Refactoring can make it harder to follow the code if you try to keep it broad enough to be applicable to multiple situations. Finally, refactoring can also introduce new bugs, as having flexibility means more possibilities to check and validate.
 
-There is a detailed statement on the advantages and disadvantages of refactoring code in general (3 pt).
-There is a detailed statement on the advantages and disadvantages of the original and refactored VBA script (3 pt).
+These pros and cons are reflected nicely in the very VBA script we wrote for Steve. Firstly, the removal of hardcoding the year 2018 and adding the "choose a year" input box allowed for multiple inputs to be processed by the same code, even future years so-long as they match the formatting. The processing time improvement was clear in the before vs after processing time screenshots above.
+The disadvantage here is adding complexity. The refactored code here is not yet too complex really, however it could use an additional change that might start to be daunting. Instead of hard-coding the specific ticker symbols into the ticker array, you could take all of the unique ticker symbols in a dataset and add it into an empty array. This way, you would analyze the whole dataset every time without having to manually input ticker symbols that you wanted to see. This would greatly improve functionality, but adds a bit more logical complexity to follow the code.
