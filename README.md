@@ -9,10 +9,14 @@
 ## Analysis
 
   We were able to help Steve and by extention his parents make an educated decision on their green energy stocks, even using our initial macro before refactoring it. There were huge gains seen in 2017, followed by a large drop off in 2018 with returns falling for all but two of the 12 stocks chosen to analyze. Here we can see the results across the two years of stock data based on the results of our macro compiling the data into easy-to-read tables.
-  
+
+#### Table 1: 2017 Results
 ![2017](Resources/2017_Results.PNG)
 
+#### Table 2: 2018 Results
 ![2018](Resources/2018_Results.PNG)
+
+
 
 Results
 
