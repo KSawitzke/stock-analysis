@@ -21,6 +21,7 @@
   In terms of code performance and functionality, there were great improvements, regardless of the poor performance of the stocks in question. 
   
   Firstly, we added an important feature that allowed for Steve or other end users to input the desired year that they wanted to run analysis on. Initially, the VBA code was hardcoded to use "2018" as the year, and in order to change which year of data was looked at, one would have to go in and edit the code.
+
 ```
       yearValue = InputBox("What year would you like to run the analysis on?")
 
@@ -30,16 +31,14 @@
     Worksheets("All Stocks Analysis").Activate
     
     Range("A1").Value = "All Stocks (" + yearValue + ")"
-    
-    .
-    .
-    .
-    
-        'Activate data worksheet
+```    
+```  
+    'Activate data worksheet
     Worksheets(yearValue).Activate
 ```
     
-    Here instead, we created an input box which saves the user input as a variable, and uses that to determine which worksheet to activate before running the calculation portions of the code. Other formatting such as titles is also updated accordingly. Now, this technically looks at the spreadsheet names, but in the current format they are named after years, so to an end user they function the same.
+   
+   Here instead, we created an input box which saves the user input as a variable, and uses that to determine which worksheet to activate before running the calculation portions of the code. Other formatting such as titles is also updated accordingly. Now, this technically looks at the spreadsheet names, but in the current format they are named after years, so to an end user they function the same.
 
 
 
