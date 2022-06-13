@@ -56,7 +56,7 @@
    Here in the first pass of code, the outer loop loops through the different ticker options, then the inner loop looks at every row of data to match to the ticker option you are on.
    
   #### Refactored Code:
-  ```
+```
    tickerIndex = 0
 
     '1b) Create three output arrays
@@ -74,7 +74,8 @@
     
         '3a) Increase volume for current ticker
         tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
-    ```
+```
+
     In this refactored code, a tickerIndex is used outside of the loop through the data, and it is iterated upon once the current row ticker symbol does not match the next row ticker symbol. This allows us to keep track of the running totals for each stock as we go, rather than looping through the entire dataset for one stock, adding it up, then starting from the beginning of the data for the next stock.
     
     As you would expect, running through the whole dataset one time rather than once per stock or 12 times greatly improves performance as seen in these screenshots of before and after processing times:
